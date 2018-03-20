@@ -1,0 +1,29 @@
+{
+  "name": "BookHub",
+  "description": "Node.js backend for BookHub Android app",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasquinn/BookHub"
+  },
+  "dependencies": {
+    "async": "latest",
+    "bcrypt-nodejs": "latest",
+    "body-parser": "latest",
+    "connect-flash": "latest",
+    "cookie-parser": "latest",
+    "ejs": "latest",
+    "express": "latest",
+    "express-session": "latest",
+    "method-override": "latest",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "passport": "latest",
+    "passport-local": "latest",
+    "request": "latest",
+    "request-promise-native": "latest",
+    "bluebird": "latest",
+    "connect-ensure-login": "latest",
+    "node-gcm": "latest"
+  }
+}

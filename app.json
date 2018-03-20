@@ -1,0 +1,6 @@
+{
+  "name": "BookHub",
+  "description": "Node.js backend for BookHub Android app",
+  "repository": "https://github.com/thomasquinn/BookHub",
+  "image": "heroku/nodejs"
+}
