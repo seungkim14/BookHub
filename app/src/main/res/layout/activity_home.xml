@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="seung.bookhub.HomeActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+
+    <ImageButton
+        android:id="@+id/button_home_logOut"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/ic_logout"
+        android:minHeight="72dp"
+        android:minWidth="72dp"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onLogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/button_home_bookSearch"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ic_findbook"
+        android:minHeight="72dp"
+        android:minWidth="72dp"
+        android:nestedScrollingEnabled="false"
+        android:onClick="onBookSearch"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_wishList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_home_profile"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/linearLayout_home_myBooks"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageButton
+            android:id="@+id/button_home_wishlist"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@drawable/ic_wishlist"
+            android:minHeight="72dp"
+            android:minWidth="72dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onWishList"
+            tools:layout_editor_absoluteX="65dp"
+            tools:layout_editor_absoluteY="65dp"/>
+
+        <TextView
+            android:id="@+id/textView_home_wishList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Wish List"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="69dp"
+            tools:layout_editor_absoluteY="158dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_myBooks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_home_wishList"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/linearLayout_home_wishList">
+
+        <ImageButton
+            android:id="@+id/button_home_myBooks"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@drawable/ic_mybook"
+            android:minHeight="72dp"
+            android:minWidth="72dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onMyBooks"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="-20dp"/>
+
+        <TextView
+            android:id="@+id/textView_home_myBooks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Books"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="132dp"
+            tools:layout_editor_absoluteY="37dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout_home_wishList"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout_home_wishList"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout_home_transactions"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_home_wishList">
+
+        <ImageButton
+            android:id="@+id/button_home_profile"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@drawable/ic_profile"
+            android:minHeight="72dp"
+            android:minWidth="72dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onProfile"
+            tools:layout_editor_absoluteX="63dp"
+            tools:layout_editor_absoluteY="192dp"/>
+
+        <TextView
+            android:id="@+id/textView_home_profile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="285dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_chats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout_home_myBooks"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout_home_myBooks"
+        app:layout_constraintTop_toTopOf="@+id/linearLayout_home_profile">
+
+        <ImageButton
+            android:id="@+id/button_home_chats"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@drawable/ic_chat"
+            android:minHeight="72dp"
+            android:minWidth="72dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onChats"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="192dp"/>
+
+        <TextView
+            android:id="@+id/textView_home_chats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chats"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="285dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_home_transactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="@+id/linearLayout_home_profile"
+        app:layout_constraintLeft_toLeftOf="@+id/linearLayout_home_profile"
+        app:layout_constraintBottom_toTopOf="@+id/button_home_logOut"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout_home_profile">
+
+        <ImageButton
+            android:id="@+id/button_home_transactions"
+            android:layout_width="85dp"
+            android:layout_height="85dp"
+            android:background="@drawable/ic_transactions"
+            android:minHeight="72dp"
+            android:minWidth="72dp"
+            android:nestedScrollingEnabled="false"
+            android:onClick="onTransactions"
+            tools:layout_editor_absoluteX="212dp"
+            tools:layout_editor_absoluteY="192dp"/>
+
+        <TextView
+            android:id="@+id/textView_home_transactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

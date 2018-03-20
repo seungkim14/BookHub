@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">BookHub</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_view_profile">Profile</string>
+    <string name="register_string"><u>Sign Up for BookHub</u></string>
+</resources>
